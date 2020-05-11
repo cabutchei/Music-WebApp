@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+#Btn {
+    text-align: center;
+}
+#Btn button {
+    padding: 12px 28px;
+    font-size: large;
+}
+#options {
+    text-align: center;
+}
