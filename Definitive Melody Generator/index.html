@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody Generator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div id="chords">
+        <audio preload="auto" id="Cmajor" src="Chord Library/Cmajor.mp3"></audio>
+        <audio preload="auto" id="Dminor" src="Chord Library/Dminor.mp3"></audio>
+        <audio preload="auto" id="Eminor" src="Chord Library/Eminor.mp3"></audio>
+        <audio preload="auto" id="Fmajor" src="Chord Library/Fmajor.mp3"></audio>
+        <audio preload="auto" id="Gmajor" src="Chord Library/Gmajor.mp3"></audio>
+        <audio preload="auto" id="Aminor" src="Chord Library/Aminor.mp3"></audio>
+        <audio preload="auto" id="Bdim" src="Chord Library/Bdim.mp3"></audio>
+    </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <a class="navbar-brand mb-0 h1">Welcome to Melody Generator</a>
+    </nav>
+    <br>
+    <h1>Melody Generator</h1>
+    <br><br>
+    <div id="buttons">
+        <button id="button-1" type="button1" class="btn btn-primary">Play</button>
+        <button id="button-2" type="button1" class="btn btn-primary">Repeat</button>
+    </div>
+    <br><br>
+    <div id="options" class="justify-content-center">
+        <h2>
+            Options
+        </h2>
+        <br>
+        <div class="form-row justify-content-center">
+            <div class="col-md-1 mb-3">
+                <label for="key">Scale</label>
+                <select class="custom-select" id="scale" required>
+                  <option value="0">C/Am</option>
+                  <option value="1">Db/Bbm</option>
+                  <option value="2">D/Bm</option>
+                  <option value="3">Eb/Cm</option>
+                  <option value="4">E/C#m</option>
+                  <option value="5">F/Dm</option>
+                  <option value="6">Gb/Ebm</option>
+                  <option value="7">G/Em</option>
+                  <option value="8">Ab/Fm</option>
+                  <option value="9">A/F#m</option>
+                  <option value="10">Bb/Gm</option>
+                  <option value="11">B/G#m</option>
+                  <option value="-1">Chromatic</option>
+                </select>
+            </div>
+            <div class="col-md-1 mb-3">
+                <label for="octaves">Octaves</label>
+                <select class="custom-select" id="octaves" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+            </div>
+            <div class="col-md-1 mb-3">
+                <label for="notes">Notes</label>
+                <select class="custom-select" id="notes" required>                  
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="-1">Infinite</option>
+                </select>
+            </div>
+            <div class="col-md-1 mb-3">
+                <label for="interval">Interval</label>
+                <select class="custom-select" id="interval" required>
+                  <option value="0.5">0.5s</option>
+                  <option value="1">1s</option>
+                  <option value="1.5">1.5s</option>
+                  <option value="2">2s</option>
+                  <option value="3">3s</option>
+                  <option value="4">4s</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="startTonic" class="form-group form-check"> -->
+    <div id="checkboxes" class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="tonic">
+        <label class="form-check-label" for="tonic">Start from the tonic?</label>
+        <input type="checkbox" class="form-check-input" id="harmony">
+        <label class="form-check-label" for="harmony">Play chords?</label>
+    </div>
+</body>
+</html>

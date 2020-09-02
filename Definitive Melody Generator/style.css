@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+#buttons {
+    text-align: center;
+}
+#buttons #button-1,#button-2 {
+    padding: 12px 28px;
+    font-size: large;
+}
+
+#options {
+    text-align: center;
+}
+
+#checkboxes #tonic{
+    margin-left: 600px;
+}
+#checkboxes #harmony{
+    margin-left: 30px;
+}
